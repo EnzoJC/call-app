@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Call App</string>
+    <string name="iniciar_monitoreo">Iniciar servicio de monitoreo</string>
+    <string name="app_predeterminada">Establecer como aplicación predeterminada</string>
+    <string name="numero">Abexa Cloud Company SAC</string>
+    <string name="contestar">Contestar</string>
+    <string name="colgar">Colgar</string>
+    <string name="duracion">Duración : 04:07</string>
+    <string name="telefono">+51 000 000 000</string>
 </resources>
