@@ -15,10 +15,10 @@
 
 
         <TextView
-            android:id="@+id/tv_call_number_label"
+            android:id="@+id/tv_mensaje"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/tv_call_number"
+            android:layout_above="@+id/tv_telefono"
             android:layout_marginBottom="74dp"
             android:gravity="center"
             android:text="@string/numero"
@@ -26,7 +26,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/tv_call_number"
+            android:id="@+id/tv_telefono"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -44,7 +44,7 @@
         android:background="@android:color/white">
 
         <TextView
-            android:id="@+id/tv_phone_calling_time"
+            android:id="@+id/tv_duracion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -59,7 +59,7 @@
             android:layout_centerInParent="true">
 
             <TextView
-                android:id="@+id/tv_phone_hang_up"
+                android:id="@+id/tv_colgar_llamada"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawablePadding="16dp"
@@ -72,11 +72,11 @@
                 tools:visibility="visible" />
 
             <TextView
-                android:id="@+id/tv_phone_pick_up"
+                android:id="@+id/tv_contestar_llamada"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_toEndOf="@id/tv_phone_hang_up"
+                android:layout_toEndOf="@id/tv_colgar_llamada"
                 android:drawablePadding="16dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:gravity="center"

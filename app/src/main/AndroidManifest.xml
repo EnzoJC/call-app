@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.callapp" >
+    package="com.example.callapp">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -12,10 +12,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CallApp" >
+        android:theme="@style/Theme.CallApp">
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,8 +25,10 @@
 
         <activity
             android:name="com.example.callapp.IncomingCallActivity"
+            android:exported="true"
             android:launchMode="singleInstance"
-            android:exported="true">
+            android:showOnLockScreen="true"
+            android:turnScreenOn="true">
             <!-- region provides ongoing call UI -->
             <intent-filter>
                 <action android:name="android.intent.action.DIAL" />
@@ -47,14 +49,17 @@
             <!-- endregion -->
         </activity>
 
-        <service android:name=".InCallServiceImpl"
-            android:permission="android.permission.BIND_INCALL_SERVICE"
-            android:exported="true">
-            <meta-data android:name="android.telecom.IN_CALL_SERVICE_UI" android:value="true" />
-            <meta-data android:name="android.telecom.IN_CALL_SERVICE_RINGING"
+        <service
+            android:name=".InCallServiceImpl"
+            android:exported="true"
+            android:permission="android.permission.BIND_INCALL_SERVICE">
+            <meta-data
+                android:name="android.telecom.IN_CALL_SERVICE_UI"
                 android:value="true" />
+            <!--            <meta-data android:name="android.telecom.IN_CALL_SERVICE_RINGING"-->
+            <!--                android:value="true" />-->
             <intent-filter>
-                <action android:name="android.telecom.InCallService"/>
+                <action android:name="android.telecom.InCallService" />
             </intent-filter>
         </service>
     </application>
